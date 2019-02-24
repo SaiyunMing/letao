@@ -60,54 +60,48 @@ $(function () {
 
     });
 
+
+
     // 2.进行登录请求
     //通过ajax 进行登录请求
 
     //注册表单验证成功事件
-    $("#form").on('success.form.bv', function ( e ) {
+    $("#form").on('success.form.bv', function (e) {
         //阻止 submit 按钮跳转
         e.preventDefault();
-        
+
         //通过 ajax 进行登录请求
         $.ajax({
             type: 'post',
-            url: '/employee/employeeLogin',
+            url: "/employee/employeeLogin",
             dataType: 'json',
             data: $('#form').serialize(),
-            success: function(info){
-                if(info.success){
+            success: function (info) {
+                console.log(info);
+
+                if (info.success) {
                     location.href = 'index.html';
                 }
-                if(info.error == 1000){
-                    alert('用户名不存在');
+                if (info.error == 1000) {
+                    // alert('用户名不存在');
+                    $('#form').data('bootstrapValidator').updateStatus('username', 'INVALID', 'callback');
                 }
-                if(info.error == 1001){
-                    alert('密码错误');
+                if (info.error == 1001) {
+                    // alert('密码错误');
+                    $('#form').data('bootstrapValidator').updateStatus('password', 'INVALID', 'callback');
                 }
-
             }
-
         })
-        
-    });
 
 
+    })
+
+    //3.重置登录
+    //点击重置按钮 , 重置表单字段内容 和 字段状态
+    $('[type="reset"]').click(function () {
+
+        $('#form').data("bootstrapValidator").resetForm();
+    })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-})
+});
