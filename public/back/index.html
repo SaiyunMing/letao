@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
+    <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>乐淘首页</title>
 </head>
+
 <body>
-    <h1>到了打兔崽子的时候啦!!!!!!</h1>
+    <!-- 左侧菜单栏 -->
+    <div class="lt_aside">
+        <!-- 标题 -->
+        <div class="title">
+            <a href="index.html">黑马35期</a>
+        </div>
+        <!-- 用户头像 -->
+        <div class="user">
+            <img src="./images/10.jpg" alt="">
+            <p>超级管理员</p>
+        </div>
+        <!-- 导航 -->
+        <div class="nav">
+            <ul>
+                <li><a href="user.html">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <span>用户管理</span>
+
+                    </a></li>
+                <li><a href="user.html">
+                        <i class="glyphicon glyphicon-list""></i>
+                        <span>分类管理</span>
+                    </a></li>
+                <li><a href="
+                            product.html">
+                            <i class="glyphicon glyphicon-tags"></i>
+                            <span>商品管理</span>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- 右侧主体 -->
+    <div class="lt_main">
+
+
+        <!-- 顶部菜单 -->
+        <div class="topbar">
+            <a href="javascript:;" class="pull-left"><i class="glyphicon glyphicon-align-justify"></i></a>
+            <a href="javascript:;" class="pull-right"><i class="glyphicon glyphicon-log-out"></i></a>
+        </div>
+        <!-- 底部主体 -->
+        <div class="container-fluid">
+
+            <!-- 路径导航 -->
+            <ol class="breadcrumb">
+                <li><a href="index.html">管理系统</a></li>
+                <li>首页</li>
+                
+            </ol>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <script src="./lib/nprogress/nprogress.js"></script>
+    <script src="./js/common.js"></script>
 </body>
+
 </html>
